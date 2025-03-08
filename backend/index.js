@@ -71,7 +71,7 @@ app.use((req, res, next) => {
 // ✅ Updated CORS Configuration
 app.use(
     cors({
-        origin: "https://mern-blog-ury1.vercel.app",
+        origin: ["https://mern-blog-ury1.vercel.app", "http://localhost:3000"],
         credentials: true,
         methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
         allowedHeaders: "Content-Type,Authorization",
