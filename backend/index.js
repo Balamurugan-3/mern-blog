@@ -61,9 +61,10 @@ app.use(cookieParser())
 
 // ✅ Add Cache-Control Headers Middleware (Prevents 304 status)
 app.use((req, res, next) => {
-    res.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
-    res.set("Pragma", "no-cache");
-    res.set("Expires", "0");
+    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+    res.setHeader("Pragma", "no-cache");
+    res.setHeader("Expires", "0");
+    res.setHeader("Surrogate-Control", "no-store");
     next();
 });
 
