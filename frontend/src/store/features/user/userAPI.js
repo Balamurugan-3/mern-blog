@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const userAPI = createApi({
     reducerPath: "userAPI",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:8000/api/user",
+        baseUrl: "https://mern-blog-ury1.vercel.app/api/user",
         credentials: "include"
     }),
     tagTypes: ["User"],
