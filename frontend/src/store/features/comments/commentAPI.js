@@ -4,7 +4,11 @@ export const commentAPI = createApi({
     reducerPath: "commentAPI",
     baseQuery: fetchBaseQuery({
         baseUrl: "https://mern-blog-ury1.vercel.app/api/comment",
-        credentials: "include"
+        credentials: "include",
+        prepareHeaders: (headers) => {
+            headers.set("Cache-Control", "no-store");
+            return headers;
+          }
     }),
     tagTypes: ["Comment"],
 

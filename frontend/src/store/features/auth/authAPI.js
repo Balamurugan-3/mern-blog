@@ -4,7 +4,11 @@ export const authAPI = createApi({
     reducerPath: "authAPI",
     baseQuery: fetchBaseQuery({
         baseUrl: "https://mern-blog-ury1.vercel.app/api/auth",
-        credentials: "include"
+        credentials: "include",
+        prepareHeaders: (headers) => {
+            headers.set("Cache-Control", "no-store");
+            return headers;
+        }
     }),
     endpoints: (builder) => ({
         registerUser: builder.mutation({
@@ -30,8 +34,8 @@ export const authAPI = createApi({
         }),
         logoutUser: builder.mutation({
             query: () => ({
-                url:"/logout",
-                method:"POST"
+                url: "/logout",
+                method: "POST"
             })
         }),
         isAuth: builder.query({

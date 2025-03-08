@@ -4,7 +4,11 @@ export const userAPI = createApi({
     reducerPath: "userAPI",
     baseQuery: fetchBaseQuery({
         baseUrl: "https://mern-blog-ury1.vercel.app/api/user",
-        credentials: "include"
+        credentials: "include",
+        prepareHeaders: (headers) => {
+            headers.set("Cache-Control", "no-store");
+            return headers;
+          }
     }),
     tagTypes: ["User"],
 
