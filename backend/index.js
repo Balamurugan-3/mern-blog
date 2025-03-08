@@ -59,13 +59,6 @@ dotenv.config()
 app.use(express.json())
 app.use(cookieParser())
 
-// ✅ Add Cache-Control Headers Middleware (Prevents 304 status)
-app.use((req, res, next) => {
-    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
-    res.setHeader("Pragma", "no-cache");
-    res.setHeader("Expires", "0");
-    next();
-});
 
 // ✅ Updated CORS Configuration
 app.use(

@@ -5,13 +5,7 @@ export const CategoryAPI = createApi({
     reducerPath: "CategoryAPI",
     baseQuery: fetchBaseQuery({
         baseUrl: "https://mern-blog-ury1.vercel.app/api/category",
-        credentials: "include",
-        prepareHeaders: (headers) => {
-            headers.set("Cache-Control", "no-store");  // Prevent caching
-            headers.set("Pragma", "no-cache");
-            headers.set("Expires", "0");
-            return headers;
-        }
+        credentials: "include"
     }),
     tagTypes: ["Category"],
     endpoints: (builder) => ({

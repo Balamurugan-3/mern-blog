@@ -4,13 +4,7 @@ export const blogLikeAPI = createApi({
     reducerPath: "blogLikeAPI",
     baseQuery: fetchBaseQuery({
         baseUrl: "https://mern-blog-ury1.vercel.app/api/blogLike",
-        credentials: "include",
-        prepareHeaders: (headers) => {
-            headers.set("Cache-Control", "no-store");  // Prevent caching
-            headers.set("Pragma", "no-cache");
-            headers.set("Expires", "0");
-            return headers;
-        }
+        credentials: "include"
     }),
     tagTypes: ["BlogLike"],
 
