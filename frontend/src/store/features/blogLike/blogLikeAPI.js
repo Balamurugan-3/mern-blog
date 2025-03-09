@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const blogLikeAPI = createApi({
     reducerPath: "blogLikeAPI",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://mern-blog-ury1.vercel.app/api/blogLike",
+        baseUrl: "https://mern-blog-backend-6tj7.onrender.com/api/blogLike",
         credentials: "include"
     }),
     tagTypes: ["BlogLike"],

@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const authAPI = createApi({
     reducerPath: "authAPI",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://mern-blog-ury1.vercel.app/api/auth",
+        baseUrl: "https://mern-blog-backend-6tj7.onrender.com/api/auth",
         credentials: "include"
     }),
     endpoints: (builder) => ({

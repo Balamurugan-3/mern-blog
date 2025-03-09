@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const commentAPI = createApi({
     reducerPath: "commentAPI",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://mern-blog-ury1.vercel.app/api/comment",
+        baseUrl: "https://mern-blog-backend-6tj7.onrender.com/api/comment",
         credentials: "include"
     }),
     tagTypes: ["Comment"],

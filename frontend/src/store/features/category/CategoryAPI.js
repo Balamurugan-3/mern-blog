@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const CategoryAPI = createApi({
     reducerPath: "CategoryAPI",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://mern-blog-ury1.vercel.app/api/category",
+        baseUrl: "https://mern-blog-backend-6tj7.onrender.com/api/category",
         credentials: "include"
     }),
     tagTypes: ["Category"],
