@@ -22,7 +22,7 @@ app.use(cookieParser())
 // ✅ Updated CORS Configuration
 app.use(
     cors({
-        origin: ["https://mern-blog-ury1.vercel.app", "http://localhost:5173"],
+        origin: ["https://mern-blog-frontend-8526.onrender.com", "http://localhost:5173"],
         credentials: true,
     })
 );
