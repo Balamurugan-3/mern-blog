@@ -62,6 +62,6 @@ export const router = createBrowserRouter([
     },
     { path: "/login", element: <UserLogin /> },
     { path: "/register", element: <UserRegister /> },
-    // { path: "/unauthorized", element: <UnauthorizedPage /> }
+    { path: "/unauthorized", element: <UnauthorizedPage /> }
 ])
 
